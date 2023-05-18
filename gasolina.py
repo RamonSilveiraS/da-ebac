@@ -5,8 +5,10 @@ import matplotlib.pyplot as plt
 
 dados = pd.read_csv('gasolina.csv')
 
-sns.set(style="darkgrid")  
+sns.set_style="whitegrid"  
+sns.color_palette("pastel")
 
-sns.lineplot(x='dia', y='venda', data=dados)
+sns.lineplot(x='dia', y='venda', data=dados, color='red')
+plt.title('Preço por dia')
 
-plt.show()
+plt.savefig('gasolina.png')
